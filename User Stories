@@ -1,0 +1,19 @@
+USER STORIES
+---------------------------------------------------------------------------
+1. Display welcome message.
+2. Display menu.
+3. Prompt user choice.
+4. Display rules when appropriate option is chosen.
+5. Exit Application when appropriate option is chosen.
+6. Start game when appropriate option is chosen.
+7. User prompted for the number of players.
+8. Player order is randomly chosen and shown.
+9. Dealer is chosen randomly and shown.
+10. Each player is dealt 8 random cards.
+11. User is shown their cards.
+12. Player to the left of the dealer has turn.
+13. During AI turn, the card played is shown.
+14. During Human turn, the hand is shown, user is prompted to pick a card to play.
+15. Card played by human is shown again.
+16. Winner of round is shown.
+17. Winner of the game is shown.
