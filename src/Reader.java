@@ -1,5 +1,8 @@
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -68,4 +71,31 @@ class CSVReader implements Reader {
         return deckList;
     }
 
+}
+
+class ImageReader implements Reader {
+
+    public ImageReader() {
+
+    }
+
+    public ArrayList readFile(String fileName) {
+
+        ArrayList image = new ArrayList();
+
+
+            try {
+                BufferedImage tempImg = ImageIO.read(new File(fileName));
+
+                JLabel labelImg = new JLabel(new ImageIcon(tempImg));
+                image.add(labelImg);
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        return image;
+    }
 }

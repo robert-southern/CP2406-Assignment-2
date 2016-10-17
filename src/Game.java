@@ -18,7 +18,7 @@ public class Game {
         this.players = new Player[numberOfPlayers];
     }
 
-    public void initialise(String fileName) {
+    public void initialise(String fileName, String fileNameImg) {
 
         for (int i = 0; i < numberOfPlayers; i++) {
             this.players[i] = new Player();
@@ -28,7 +28,7 @@ public class Game {
         pickDealer();
         setNamesAndDisplay();
         DeckBuilder deckBuilder = new DeckBuilder();
-        this.gameDeck = deckBuilder.buildDeck(fileName);
+        this.gameDeck = deckBuilder.buildDeck(fileName, fileNameImg);
         dealHands();
     }
 

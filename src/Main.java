@@ -53,7 +53,8 @@ public class Main {
 
             Game game = new Game(numPlayers);
 
-            game.initialise("J:/CORSAIR USB 25-8-16/CP2406/2406 Assign1/Assignment 1/DeckList.csv");
+            game.initialise("J:/CORSAIR USB 25-8-16/CP2406/2406 Assign1/Assignment 1/DeckList.csv",
+                    "J:/CORSAIR USB 25-8-16/CP2406/2406 Assign1/mst master/mst master/images/slide");
 
             for (int i = 0; i < game.getPlayers().length; i++) {
                 if (game.getPlayers()[i].isDealer()) {

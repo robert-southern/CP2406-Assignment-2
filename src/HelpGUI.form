@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="HelpGUI">
+  <grid id="27dc6" binding="helpPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="3" left="3" bottom="3" right="3"/>
+    <constraints>
+      <xy x="20" y="20" width="936" height="570"/>
+    </constraints>
+    <properties/>
+    <border type="line"/>
+    <children>
+      <grid id="2049f" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="32a5f" class="javax.swing.JButton" binding="okButton">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Ok"/>
+            </properties>
+          </component>
+          <hspacer id="aed3e">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="42b2b">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <component id="ffd7f" class="javax.swing.JTextArea" binding="helpTextArea">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="ABOUT:&#10;Mineral Super Trumps is a card game designed to help players learn about the properties &#10;and uses of common rock-forming minerals.&#10;&#10;The Deck consists of 54 mineral cards, and 6 &quot;supertrump&quot; cards.&#10;&#10;Each mineral card includes information about the mineral as well as further information &#10;in the five playing categories: Hardness, Specific Gravity, Cleavage, Crustal Abundance&#10;and Economic Value.&#10;&#10;----------------------------------------------------------------------------------------------------------------------------------&#10;&#10;RULES:&#10;1. Play a card and select a category.&#10;2. Player to the left must play a card with a higher value in the selected category.&#10;3. When the next player can't play, he picks up a card from the deck and passes his turn.&#10;4. If a player has passed, he may not play until all but one player has passed.&#10;5. A player may use a supertrump card at any of their turns; the player changes the&#10;   trump category according to the instructions on the supertrump card. Any player who&#10;   previously passed his turn may play again.&#10;6. Playing the Geophysicist card together with the Magnetite card wins that player the hand.&#10;7. When all but one player has passed his turn, the remaining player gets to lead out the&#10;   next round and chooses the next trump category.&#10;8. The Winner of the game is the first player to lose all of their cards.&#10;9. The game continues until all but one player (the loser) has lost their cards. "/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

@@ -5,6 +5,7 @@
  */
 
 
+import javax.swing.*;
 import java.util.DoubleSummaryStatistics;
 
 public class Card {
@@ -23,6 +24,7 @@ public class Card {
     private boolean Played = false;
     private boolean superTrumpCard = false;
     private double[] values;
+    private JLabel image;
 
     public Card() {
 
@@ -243,5 +245,13 @@ public class Card {
 
     public String getEconValueType() {
         return econValueType;
+    }
+
+    public JLabel getImage() {
+        return image;
+    }
+
+    public void setImage(JLabel image) {
+        this.image = image;
     }
 }

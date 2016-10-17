@@ -1,11 +1,17 @@
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GameGUI implements ActionListener {
+public class GameGUI extends JFrame implements ActionListener {
 
+    private int numPlayers = 3;
+
+    private JMenuBar menuBar = new JMenuBar();
+    private JMenu menu1 = new JMenu("Game");
+    private JMenu menu2 = new JMenu("Help");
     private JMenuItem newGame = new JMenuItem("New Game");
     private JMenuItem options = new JMenuItem("Options");
     private JMenuItem exit = new JMenuItem("Exit");
@@ -13,20 +19,13 @@ public class GameGUI implements ActionListener {
 
 
     public GameGUI() {
+
+        this.setTitle("Mineral Super Trumps");
+
         newGame.addActionListener(this);
         options.addActionListener(this);
         exit.addActionListener(this);
         viewHelp.addActionListener(this);
-
-    }
-
-    public void run() {
-
-        JFrame frame = new JFrame("Mineral Super Trumps");
-        JMenuBar menuBar = new JMenuBar();
-
-        JMenu menu1 = new JMenu("Game");
-        JMenu menu2 = new JMenu("Help");
 
         menu1.add(newGame);
         menu1.addSeparator();
@@ -39,29 +38,29 @@ public class GameGUI implements ActionListener {
         menuBar.add(menu1);
         menuBar.add(menu2);
 
-        frame.setJMenuBar(menuBar);
-
-        frame.setContentPane(new MainGUI().getPanelMain());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-
+        this.setContentPane(new MainGUI().getPanelMain());
+        this.setJMenuBar(menuBar);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(1200,900);
+        this.setMinimumSize(new Dimension(600,300));
+        this.setResizable(false); //todo: change this to resisable in future.
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
     }
 
     public void actionPerformed(ActionEvent e) {
+
         if (e.getSource() == newGame) {
-            //todo: start new game
+            setContentPane(new MainGUI(numPlayers).getPanelMain());
         }
         if (e.getSource() == options) {
-            //todo: display options
-            // need to make default options (obviously).
+            OptionsGUI optionsGUI = new OptionsGUI();
         }
         if (e.getSource() == exit) {
             System.exit(0);
         }
         if (e.getSource() == viewHelp) {
-            //todo: view help
-            //Rules of the game, strategy, and such.
+            new HelpGUI();
         }
 
     }
